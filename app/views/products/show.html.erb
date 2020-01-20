@@ -3,9 +3,13 @@
     <h1><%= @product.name %></h1>
     <h2><%= @product.price  %> Naira</h2>
     <p><%= @product.description  %></p>
-    <%= link_to "Back to all products", root_path, class: "btn btn-success" %>
-    <%= link_to "Remove a product", products_delete_path(@product), class: "btn btn-danger" %>
-    <%= link_to "Edit a product", edit_product_path, class: "btn btn-light" %>
+        <p><%= @product.image  %></p>
+
+    <%= link_to "Back to all products", root_path, class: "btn btn-outline-success" %>
+    <%= link_to "Remove a product", products_delete_path(@product), class: "btn btn-outline-danger" %>
+    <%= link_to "Edit a product", edit_product_path, class: "btn btn-outline-light" %>
+
+
 
 
 
