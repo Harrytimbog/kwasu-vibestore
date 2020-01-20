@@ -1,0 +1,31 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.show {
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  color: #f0e3ff;
+  height: 100vh;
+  font-style: Helvetical;
+}
+
+.show, h2 {
+  font-size: 24px;
+}
+
+.show, p {
+  font-size: 14px;
+}
+
