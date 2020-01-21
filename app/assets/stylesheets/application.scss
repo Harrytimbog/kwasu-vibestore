@@ -16,16 +16,30 @@
   border-radius: 5px;
   padding: 15px;
   text-align: center;
-  color: #f0e3ff;
+  color: white;
   height: 100vh;
-  font-style: Helvetical;
+  font-family: sans-serif;
 }
 
 .show, h2 {
   font-size: 24px;
+  color: white;
 }
 
 .show, p {
   font-size: 14px;
+  color: white;
 }
 
+.review {
+  color: #3e206d;
+}
+
+#foot {
+  background-color: #916dd5;
+  color: tomato;
+  text-align: center;
+  font-weight: bold;
+  margin: 0px;
+  font-family: serif;
+}

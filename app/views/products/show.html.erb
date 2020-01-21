@@ -3,7 +3,6 @@
     <h1><%= @product.name %></h1>
     <h2><%= @product.price  %> Naira</h2>
     <p><%= @product.description  %></p>
-        <p><%= @product.image  %></p>
 
     <%= link_to "Back to all products", root_path, class: "btn btn-outline-success" %>
     <%= link_to "Remove a product", products_delete_path(@product), class: "btn btn-outline-danger" %>
@@ -13,27 +12,29 @@
 
 
 
-    <h3>Reviews</h3>
-    <% if @product.reviews.empty? %>
-      <p>Be the first to let a review</p>
-    <% else %>
-      <ul class="list-group">
-        <% @product.reviews.each do |review| %>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span class="badge badge-primary badge-pill">
-              <% counter = 0 %>
-              <% 5.times do %>
-                <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
-                <% counter += 1 %>
-              <% end %>
-            </span>
-            <%= review.content %>
-          </li>
-        <% end %>
-      </ul>
-    <% end %>
+      <h3>Reviews</h3>
+      <% if @product.reviews.empty? %>
+        <p>Be the first to let a review</p>
+      <% else %>
+        <ul class="list-group">
+          <% @product.reviews.each do |review| %>
+    <div class="review">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span class="badge badge-primary badge-pill">
+                <% counter = 0 %>
+                <% 5.times do %>
+                  <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+                  <% counter += 1 %>
+                <% end %>
+              </span>
+              <%= review.content %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
 
-    <%= render "reviews/new", product: @product, review: @review %>
+      <%= render "reviews/new", product: @product, review: @review %>
+    </div>
 
   </div>
 </div>
