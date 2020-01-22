@@ -4,10 +4,10 @@
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
-  background-color: #093166;
+  color: tomato;
   text-align: center;
   position: sticky;
+  font-family: serif;
 }
 .footer-links {
   display: flex;
@@ -15,6 +15,7 @@
 }
 .footer-links a {
   color: black;
+  background-color: #916dd5;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
@@ -25,4 +26,9 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.footer-copyright {
+  background-color: #916dd5;
+
 }
