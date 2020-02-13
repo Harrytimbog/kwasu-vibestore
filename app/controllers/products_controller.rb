@@ -1,15 +1,17 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   def index
     @products = Product.all
+  end
+
+  def new
+    @product = Product.new
   end
 
   def show
     @product = Product.find(params[:id])
     @review = Review.new
-  end
-
-  def new
-    @product = Product.new
   end
 
   def create
@@ -32,13 +34,19 @@ class ProductsController < ApplicationController
   end
 
   def delete
-    @product = Product.find(params[:id])
     @product.destroy
-
     redirect_to products_path
+    respond_to do |format|
+      format.html { redirect_to products_path, notice: 'Product was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
+
+  def set_product
+    @product = Product.find(params[:id])
+  end
 
   def product_params
     params.require(:product).permit(:name, :price, :description, :image)
