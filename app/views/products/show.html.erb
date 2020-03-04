@@ -5,8 +5,8 @@
     <p><%= @product.description  %></p>
 
     <%= link_to "Back to all products", products_path, class: "btn btn-outline-success" %>
-    <%= link_to "Edit a product", edit_product_path, class: "btn btn-outline-light" %>
-    <%= link_to 'Delete', product_path(@product), :confirm => 'Are you sure?', :method => :delete, class: "btn btn-outline-danger" %>
+    <%= link_to "Edit product", edit_product_path, class: "btn btn-outline-light" %>
+    <%= link_to 'Delete product', product_path(@product), :confirm => 'Are you sure?', :method => :delete, class: "btn btn-outline-danger" %>
 
 
 
