@@ -31,7 +31,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
-
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -43,6 +42,8 @@ gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'cloudinary', '~> 1.16.0'
+gem 'dotenv-rails', groups: [:development, :test]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
