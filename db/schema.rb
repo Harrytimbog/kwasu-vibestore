@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 2020_03_03_194805) do
     t.string "name"
     t.integer "price"
     t.text "description"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
